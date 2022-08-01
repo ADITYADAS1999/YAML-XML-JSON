@@ -1,0 +1,99 @@
+"apple" : "I am a red fruit"
+
+1 : "this is yaml file"
+---
+
+# lists
+-apple
+-mango
+-banana
+-APPLE
+---
+
+cities:
+ -new delhi
+ -panjab
+ -gujrat
+ -mumbai
+---
+cities: [new delhi, panjab, gujrat, mumbai]
+---
+
+{mango : "yellow fruit", age : "56"}
+
+...
+
+# string variables
+
+myself : aditya
+fruit : "apple"
+job : "SWE"
+
+bio :|
+Hey it aditya!
+Aditya is a cool dude!
+
+# Write a single line in multiple line
+
+massage :>
+this will
+all be
+in a single line
+
+# Same as 
+
+massage : this will all be in a single line
+
+Numbers: 5415
+
+marks : 98.58
+
+boolean values: No, n , N , false, False, FALSE
+
+# same as true
+
+yes, YES, Y, y
+
+
+# specify the type
+
+zero: !!int 0
+
+positiveNum: !!int 45
+
+negativeNum: !!int -45
+
+binaryNum: !!int 0b11001
+
+octalNum: !!int 06475
+
+hexa: !!int 0X45
+
+Commavalue: !!int +540_000 # 540,000
+
+# floating point number
+
+marks: !!float 54.48
+
+infinite: !!float .int
+
+not a num: .nun
+
+booleanvalue : !!bool No
+
+message: !!str this will be in a single line
+
+# null
+
+surname: !!null Null # or null Null~
+~: this is a null key
+
+# date & times
+
+date: !!time stamp 2022-02-08
+india time: 2001-12-15T02:09:43.10 +5:30
+no time zone: 2001-12-15T02:09:43.10
+
+exponentialNum: 6.02E564
+
+

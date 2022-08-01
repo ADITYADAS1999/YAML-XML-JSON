@@ -1,0 +1,99 @@
+student: !!seq
+-marks
+-name
+-rollnum
+
+#like this also
+
+cities: [new delhi, panjab, kolkata, mumbai]
+
+#Some of the key of the seq will be empty
+#sprce seq
+
+-hey
+-how
+-
+-Null
+-Sup
+
+# Nested sequence
+
+-
+ -mango
+ -apple
+ -banana
+-
+ -marks
+ -name
+ -rollnum
+
+#key:  value pair are called maps
+
+!!map
+
+#nested mapping : map within mappping 
+
+name: aditya
+role:
+ age: 22
+ jon: student
+
+#same as
+
+name: aditya 
+role: {age: 22, job: student}
+
+#pairs key may duplicate values
+# !!pairs
+
+pair example : !!pairs
+- job: student
+- job: teacher
+
+# same as
+ pair example: !!pairs [job: student, job: teacher]
+
+ #this will be an array of hashtables
+
+ # !!set will allow you to have unique values
+
+ name: !!set
+  ?aditya
+  ?cs
+  ?devops
+
+#dictionary !!omap
+
+people: !!omap
+- aditya:
+ name: aditya
+ age: 22
+-devops: 
+ name: devops
+ types: subject
+
+ #reusing some properties using anchors
+
+liking: &likes
+ fav fruit: mango
+ dislike: grapes
+
+person1 :
+ name:  aditya
+ fav fruit: mango
+ dislike: grapes
+
+person2 :
+ name:  sumit
+ <<: *likes
+ dislikes: barries
+
+person3 :
+ name:  arpit
+ fav fruit: mango
+ dislike: grapes
+
+person4 :
+ name:  sachin
+ fav fruit: mango
+ dislike: grapes

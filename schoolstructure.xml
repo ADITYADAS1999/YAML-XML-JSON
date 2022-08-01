@@ -1,0 +1,9 @@
+<?xml version "1.0" encoding="UTF-8"?>
+<school name="dps" principal="someone">
+    <student>
+        <student>
+        <roll>23</roll>
+        <name>"aditya"</name>
+        <marks>84</marks>
+    </student>
+</school>
